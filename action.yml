@@ -1,6 +1,6 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'stub.js'
 
