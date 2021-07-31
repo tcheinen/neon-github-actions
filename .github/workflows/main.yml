@@ -9,6 +9,10 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
