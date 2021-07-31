@@ -3,3 +3,4 @@ npm: node_modules/
 
 build: ./src npm
 	docker run --rm -v $$(pwd)\:/wd -v ~/.cargo/registry\:/root/.cargo/registry iai-compare-action
+	strip index.node
