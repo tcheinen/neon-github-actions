@@ -1,11 +1,12 @@
 use neon::prelude::*;
 
-fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
+fn init(mut cx: FunctionContext) -> JsResult<JsString> {
+    println!("howdy from rust");
     Ok(cx.string("hello node"))
 }
 
 #[neon::main]
 fn main(mut cx: ModuleContext) -> NeonResult<()> {
-    cx.export_function("hello", hello)?;
+    cx.export_function("hello", init)?;
     Ok(())
 }
